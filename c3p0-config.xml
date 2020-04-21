@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+    <named-config name="c3p0">
+
+        <!--指定数据源的基本属性-->
+        <property name="user">root</property>
+        <property name="password">001028li</property>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/wechat?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=UTF-8</property>
+
+        <!--当数据库中连接数不足时，一次向数据库服务器申请多少个连接-->
+        <property name="acquireIncrement">10</property>
+        <!--初始化数据库连接池时连接的数量-->
+        <property name="initialPoolSize">10</property>
+        <!--数据库连接池中最小的数据库连接数-->
+        <property name="minPoolSize">10</property>
+        <!--数据库连接池中最大的数据库连接数-->
+        <property name="maxPoolSize">20</property>
+        <!-- 获取连接超时时间 -->
+        <property name="checkoutTimeout" value="10000" />
+        <!-- 当获取连接失败重试次数 -->
+        <property name="acquireRetryAttempts" value="2" />
+
+<!--        &lt;!&ndash; by ljz&ndash;&gt;-->
+<!--        <property name="maxIdleTime" value="60"/>-->
+
+    </named-config>
+</c3p0-config>
