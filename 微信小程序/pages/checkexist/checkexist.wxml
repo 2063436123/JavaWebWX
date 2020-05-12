@@ -1,0 +1,51 @@
+<!-- <view wx:for="{{myGames}}">
+  <view class="card" bindtap="showGame" data-c="{{item.id}}">
+      <image class='iconImage' src="../../image/ball.png" mode='aspectFit'></image>
+    <view class='info'>
+      <view>{{item.date}} {{item.time}} {{item.site}}</view>
+    </view>
+  </view>
+</view> -->
+<view class="card">
+  <view class="card" style="font-size:50rpx;font-weight:bold;font-family:Microsoft Yahei;">比赛列表
+    <view style="position:absolute;right:20rpx;top:20rpx;">
+      <text class="page__desc" style="text-align:center;font-size:25rpx;">显示已截止</text>
+      <view>
+        <!-- checked="{{switch1Checked}}" -->
+        <switch bindchange="switch1Change" />
+      </view>
+    </view>
+  </view>
+
+  <view wx:for="{{myGames}}">
+    <view wx:if="{{now <= item.date+' '+item.time}}">
+      <view class="card" bindtap="showGame" data-c="{{item.gameId}}" data-content="{{item.content}}" data-time="{{item.time}}"  data-deadline="{{item.date}}" data-name="{{item.name}}" data-site="{{item.site}}">
+        <image src="../../icons/{{item.name}}.png" mode="widthFix"></image>
+        <view class="info">
+          <view class="name">{{item.date}} {{item.time}} {{item.site}}</view>
+          <view class="desc">
+            <text style="font-weight:bold;">{{item.content}}</text> 报名中</view>
+        </view>
+        <view class="line"></view>
+      </view>
+    </view>
+
+    <view wx:elif="{{now > item.date+' '+item.time}}">
+      <view class="card" style="display:{{bottomHidden}}">
+        <view bindtap="showGame" data-c="{{item.gameId}}" data-content="{{item.content}}" data-deadline="{{item.date}}" data-name="{{item.name}}" data-time="{{item.time}}" data-site="{{item.site}}">
+          <image src="../../icons/{{item.name}}.png" mode="widthFix"></image>
+          <view class="info">
+            <view class="name">{{item.date}} {{item.time}} {{item.site}}</view>
+            <view class="desc">
+              <text style="font-weight:bold;">{{item.content}} {{item.name}} </text> 已过期 </view>
+          </view>
+        </view>
+        <view class="line"></view>
+        <button style="display:{{bottomHidden}};font-size:20rpx;position:absolute;right:30rpx;bottom:45rpx;" bindtap="cancel" data-id="{{item.gameId}}" size="mini">删除</button>
+      </view>
+    </view>
+
+
+  </view>
+  <view class="card1 name" style="text-align:center;" wx:if="{{myGames.length==0}}">没有参加任何比赛</view>
+</view>

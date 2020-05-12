@@ -1,0 +1,65 @@
+.content {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*
+功能介绍
+card为每一个块，通过height控制高度，自动分块
+card image设置图片样式，可用absolute来绝对定位
+info为文字块同样可用absolute
+*/
+
+.card {
+  height: 195rpx;
+  margin: 10px; /*外边区域*/
+  position: relative; /*相对定位*/
+}
+.card1{
+  height: 150rpx;
+  margin:30px;/*外边区域*/
+  position: relative;/*相对定位*/
+}
+
+/*后代选择器*/
+
+.card image {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  left: 30rpx;
+  top: 80rpx;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #5f687e;
+}
+
+.line {
+  position: absolute;
+  bottom: 11rpx;
+  background: gray;
+  width: 92%;
+  height: 2rpx;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.desc {
+  margin-bottom: 10px;
+}
+
+.info {
+  color: #5f687e;
+  font-size: 16px;
+  position: absolute;
+  bottom: 30rpx;
+  left: 120rpx;
+}
+
+/* 
+li {
+  display: inline;
+  background:silver;
+  padding: 5px;
+} */

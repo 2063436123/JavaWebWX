@@ -1,0 +1,65 @@
+.background{
+  width:100%;
+  height: 35%;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589129171931&di=8d10eb3daeb07d0484328ad7a60ddba8&imgtype=0&src=http%3A%2F%2Fuploads.oh100.com%2Fallimg%2F1710%2F32-1G026151109.jpg)no-repeat;  /*只能用网络地址*/
+  background-size: cover;
+  /*层叠布局*/
+  z-index: 0;
+  /*相对位置，这样其他view就能用绝对位置覆盖上去*/
+  position: absolute;
+}
+
+image {
+  width: 100%;
+}
+
+.userimg {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 121rpx;
+  height: 121rpx;
+  border-radius: 50%;
+}
+
+.welcome {
+  position: absolute;
+  top:500rpx;
+  left: 170rpx;
+  height: 100rpx;
+  font-size: 40rpx;
+  color: #999;
+  font-family: KaiTi;
+  font-weight: bold;
+}
+
+.card {
+  height: 140rpx;
+  margin: 10rpx; /*外边区域*/
+  position: relative; /*相对定位*/
+}
+
+
+.btn1 {
+  width: 80%;
+  margin-top: 70rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}

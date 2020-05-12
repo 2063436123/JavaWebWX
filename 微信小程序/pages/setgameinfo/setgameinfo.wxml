@@ -1,0 +1,64 @@
+<!--pages/setgameinfo/setgameinfo.wxml-->
+<view class="card">
+
+  <view class="card" style="font-size:50rpx;font-weight:bold;height:100rpx;">发起邀约
+    <view class="rcard" style="font-size:30rpx;">已选球类：{{name}}</view>
+  </view>
+
+  <view class="card" style="height:170rpx;">
+    <view class="section__title" style="position:absolute;bottom:130rpx;">比赛名称</view>
+    <input class="wxui-input" maxlength="10" name="Name" placeholder="起个名字吧" style="text-align:right;width:88%;position:absolute;bottom:50rpx;" placeholder-style="text-align:right;" bindblur="checkContent" bindinput="getContent" />
+    <view class="line" style="bottom:40rpx;"></view>
+  </view>
+
+  <view class="card">
+    <view class="section">
+      <view class="section__title">日期</view>
+      <picker mode="date" value="{{date}}" start="{{nowDate}}" end="2030-09-01" bindchange="bindDateChange">
+        <view class="picker" style="text-align:right;font-size:30rpx;">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+    <view class="line"></view>
+  </view>
+
+  <view class="card">
+    <view class="section">
+      <view class="section__title">时间</view>
+      <!--修改： 当天Date的话，Time不能超过当前时间 -->
+      <picker mode="time" value="{{time}}" start="{{nowDate==date?nowTime:'00:00'}}" end="23:59" bindchange="bindTimeChange">
+        <view class="picker" style="text-align:right;font-size:30rpx;">
+          {{time}}
+        </view>
+      </picker>
+    </view>
+    <view class="line"></view>
+  </view>
+
+  <view class="card">
+    <view class="section">
+      <view class="section__title">地点</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker" style="text-align:right;font-size:30rpx;">
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="line"></view>
+  </view>
+
+
+  <view class="card" style="height=100rpx;">
+    <!-- <button bindtap="submit" wx:if="{{hasContent}}" class="btn1" style="position:absolute;top:10rpx;width:87vw">确定</button> -->
+    <button wx:if="{{hasContent}}" class='btn1' bindtap="submit">
+      <image class='btnImg' src='../../icons/enter.png'></image>
+      <view>确定</view>
+    </button>
+    <!-- <button wx:else class="unbtn1" style="position:absolute;top:10rpx;width:87vw">确定</button> -->
+    <button wx:else class="unbtn1">
+      <image class='btnImg' src='../../icons/wait.png'></image>
+      <view>待取名</view>
+    </button>
+  </view>
+</view>

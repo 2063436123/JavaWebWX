@@ -1,0 +1,45 @@
+<!--pages/showGameInfo/showGameInfo.wxml-->
+
+<view class="card">
+
+  <view class="card" style="font-size:50rpx;font-weight:bold;">本场比赛: <view style="font-size:40rpx;position:absolute;left:240rpx;top:6rpx;">{{content}}</view> 
+  <view class="cardtext">{{name}} {{deadline}} {{time}} {{site}}</view>
+  </view>
+
+  <view class="card" wx:for="{{participants}}">
+    <image class="cardimage" src="{{item.avatarurl}}" mode="widthFix"></image>
+    <view class="info">
+      <view class="name">{{item.nickname}}</view>
+    </view>
+    <view class="line"></view>
+
+    <view class="card1 name" style="text-align:center;" wx:if="{{participants.length==0}}">没有人员报名</view>
+  </view>
+<!-- <text>{{onSigning}} {{isSponsor}} {{notSignUp}}</text> -->
+<view class="card">
+  <view wx:if="{{onSigning}}">
+    <!-- <view class="card1" wx:if="{{isSponsor==true}}">
+      <button bindtap="cancel" class="authBtn">取消活动</button>
+    </view> -->
+    <view class="card1" wx:if="{{isSponsor==true}}">
+    <button class='btn1' bindtap="cancel">
+      <image class='btnImg' src='../../icons/cancel.png'></image>
+      <view>取消活动</view> 
+    </button>
+    </view>
+    <!-- <view class="card1" wx:elif="{{notSignedUp==true}}">
+      <button bindtap="signUp" class="authBtn">报名此活动</button>
+    </view> -->
+    <view class="card1" wx:elif="{{notSignedUp==true}}">
+      <button class='btn1' bindtap="signUp">
+      <image class='btnImg' src='../../icons/sign.png'></image>
+      <view>报名活动</view> 
+    </button>
+    </view>
+    <view class="card1 name" style="text-align:center;" wx:else>已报名此活动</view>
+  </view>
+  <view wx:else>
+    <view class="card1 name" style="text-align:center;">此活动已过期</view>
+  </view>
+</view>
+</view>

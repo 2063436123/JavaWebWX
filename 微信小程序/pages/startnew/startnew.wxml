@@ -1,0 +1,13 @@
+
+<view class="card">
+   <view class="top">选择球类</view>
+</view>
+
+<view class="card">
+  <image bindtap="choose" data-c="羽毛球" class="left" src="../../image/badminton.jpg" mode="widthFix"></image>
+  <image bindtap="choose" data-c="篮球" class="right" src="../../image/basketball.jpg" mode="widthFix"></image>
+  <image bindtap="choose" data-c="足球" style="top:300rpx" class="left" src="../../image/football.jpg" mode="widthFix"></image>
+  <image bindtap="choose" data-c="乒乓球" style="top:300rpx;" class="right" src="../../image/tabletennis.jpg" mode="widthFix"></image>
+  <image bindtap="choose" style="top:600rpx" data-c="网球" class="left" src="../../image/tennis.jpg" mode="widthFix"></image>
+  <image bindtap="choose" style="top:600rpx;" data-c="排球" class="right" src="../../image/volleyball.jpg" mode="widthFix"></image>
+</view>

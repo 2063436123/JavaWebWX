@@ -1,0 +1,49 @@
+page {
+  background-color: rgb(255, 255, 255);
+}
+
+.card {
+  height: 100rpx;
+  margin: 10px; /*外边区域*/
+  position: relative; /*相对定位*/
+}
+/*顶端样式*/
+
+.top {
+  font-weight: bold;
+  font-size: 50rpx;
+  height: 20rpx;
+}
+
+/*分割线样式*/
+
+.divLine {
+  background: #e0e3da;
+  width: 90%;
+  height: 10rpx;
+}
+
+/*后代选择器*/
+
+.card image {
+  width: 48%;
+  border-radius: 5px; /*边框圆角*/
+  box-shadow: 0 0 5px #5f687e; /*阴影,前两个参数是x,y的偏移量*/
+}
+
+.left {
+  position: absolute;
+  left: 1px;
+}
+
+.right {
+  position: absolute;
+  right: 1px;
+}
+
+.logo {
+  width: 80px;
+  position: absolute; /*绝对定位*/
+  top: 10px;
+  right: 20px;
+}

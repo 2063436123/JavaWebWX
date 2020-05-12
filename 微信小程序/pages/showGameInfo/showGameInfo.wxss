@@ -1,0 +1,89 @@
+/* pages/showGameInfo/showGameInfo.wxss */
+/*
+功能介绍
+card为每一个块，通过height控制高度，自动分块
+card image设置图片样式，可用absolute来绝对定位
+info为文字块同样可用absolute
+*/
+.card{
+  height: 140rpx;
+  margin:10px;/*外边区域*/
+  position: relative;/*相对定位*/
+}
+
+.cardtext{
+  font-weight: normal;
+  font-size:30rpx;
+  top: 90rpx;
+  left:5rpx;
+  position: absolute;
+}
+
+.line {
+  position: absolute;
+  bottom: 6rpx;
+  background: gray;
+  width: 92%;
+  height: 2rpx;
+}
+
+
+.cardimage {
+  position: absolute;
+  width: 80rpx;
+  height:80rpx;
+  left:50rpx;
+  top:25rpx;
+} 
+
+.name {
+  font-weight:bold;
+}
+
+.desc {
+  margin-bottom: 10px;
+}
+.info {
+  color:#5f687E;
+  font-size:16px;
+  position: absolute;
+  bottom:50rpx;
+  left:300rpx;
+}
+
+/* .authBtn {
+  height: 45px;
+  align-content: center;
+  font-size: 17.5px;
+  color: white;
+  background-color: burlywood;
+} 
+ .card1{
+  height: 150rpx;
+  margin:30px;
+  position: relative;
+} */
+
+
+.btn1 {
+  width: 80%;
+  margin-top: 70rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}

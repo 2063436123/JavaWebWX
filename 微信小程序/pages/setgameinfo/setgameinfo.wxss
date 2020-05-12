@@ -1,0 +1,73 @@
+/* pages/setgameinfo/setgameinfo.wxss */
+
+page {
+  background-color: white;
+}
+
+
+.card {
+  height: 150rpx;
+  margin:20rpx;
+  margin-top:22rpx;
+  margin-bottom:22rpx;
+  position: relative; /*相对定位*/
+}
+.rcard {
+  height: 40rpx;
+  right: 70rpx;
+  top:22rpx;
+  position: absolute;
+}
+
+.line{
+  position: absolute;
+  bottom:6rpx;
+  background: gray;
+  width: 92%;
+  height: 1rpx;
+}
+
+.picker {
+  margin: 20rpx ;
+  text-align: center;
+  width: 80%;
+  right: 0rpx;
+  padding: 13px;
+  color:black;
+  background-color: #FFFFFF;
+  border-radius: 5px; /*边框圆角*/
+}
+.btn1 {
+  width: 80%;
+  margin-top: 70rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
+
+.unbtn1 {
+  width: 80%;
+  margin-top: 70rpx;
+  background-color: rgba(222, 184, 135, 0.600);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
